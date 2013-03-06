@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using RestSharp;
 
 namespace KeenClient_DotNet
@@ -37,18 +38,41 @@ namespace KeenClient_DotNet
         }
         public List<ProjectsResponse> GetProjects()
         {
-            var request = new RestRequest("/" + KeenContants.API_VERSION + "projects/?api_key=" + KeenContants.API_KEY, Method.GET);
+            var request = new RestRequest("/" + KeenContants.API_VERSION + "/projects?api_key=" + KeenContants.API_KEY, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
             var response = _restClient.Execute(request);
             var content = response.Content;
             var deserializedReply = _restClient.Execute<List<ProjectsResponse>>(request);
             return deserializedReply.Data;
         }
-        public void GetProjectRow()
+        public List<ProjectRowResponse> GetProjectRow()
         {
+            var request = new RestRequest("/" + KeenContants.API_VERSION + "/projects/" + KeenContants.PROJECT_KEY + "?api_key=" + KeenContants.API_KEY, Method.GET);
+            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
+            var response = _restClient.Execute(request);
+            var content = response.Content;
+            var deserializedReply = _restClient.Execute<List<ProjectRowResponse>>(request);
+            return deserializedReply.Data;
         }
-        public void GetEvent()
+        public List<EventResponse> GetEvent(Method requestType)
         {
+            switch (requestType)
+            {
+                case Method.GET:
+                    var request = new RestRequest("/" + KeenContants.API_VERSION + "/projects/" + KeenContants.PROJECT_KEY + "/events?api_key=" + KeenContants.API_KEY, Method.GET);
+                    request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
+                    _restClient.Authenticator = new HttpBasicAuthenticator("api_key", KeenContants.API_KEY);
+                    var response = _restClient.Execute(request);
+                    var content = response.Content;
+                    var deserializedReply = _restClient.Execute<List<EventResponse>>(request);
+                    return deserializedReply.Data;
+                case Method.POST:
+
+                default:
+                    throw new Exception("Broke in Get Event");
+            }
+
+
         }
         public void GetEventCollection()
         {
