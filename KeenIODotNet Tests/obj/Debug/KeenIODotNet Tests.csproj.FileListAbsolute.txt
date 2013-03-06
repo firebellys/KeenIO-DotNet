@@ -1,7 +1,14 @@
 C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\obj\Debug\KeenIODotNet Tests.csprojResolveAssemblyReference.cache
 C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\KeenIODotNet Tests.dll
 C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\KeenIODotNet Tests.pdb
-C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\KeenClient DotNet.dll
-C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\KeenClient DotNet.pdb
 C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\obj\Debug\KeenIODotNet Tests.dll
 C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\obj\Debug\KeenIODotNet Tests.pdb
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\KeenIODotNet Tests.dll.config
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\KeenClient-DotNet.dll
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\RestSharp.dll
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\KeenClient-DotNet.pdb
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\RestSharp.xml
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenIODotNet Tests\bin\Debug\System.Net.Http.Primitives.xml

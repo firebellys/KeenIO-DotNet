@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Newtonsoft;
-using Newtonsoft.Json.Linq;
+﻿using System.Collections.Generic;
 using RestSharp;
 
 namespace KeenClient_DotNet
@@ -14,24 +9,18 @@ namespace KeenClient_DotNet
         /// <summary>
         /// Versionses this instance.
         /// </summary>
-        public VersionsResponse GetVersions()
+        public List<VersionsResponse> GetVersions()
         {
-            var reply = new VersionsResponse();
-            var httpReply = new RestSharp.RestClient(UrLs.VersionURL);
-            var request = new RestRequest("resource/{id}", Method.POST);
-            request.AddParameter("name", "value"); // adds to POST or URL querystring based on Method
-            //request.AddUrlSegment("id", 123); // replaces matching token in request.Resource
 
-            // easily add HTTP Headers
-            request.AddHeader("header", "value");
+            var httpReply = new RestClient(UrLs.VersionURL);
 
-            // execute the request
-            RestResponse response = httpReply.Execute(request);
-            var content = response.Content; // raw content as string
+            var request = new RestRequest("/?api_key=1FA4C5505E789A12EA97BBC73394F830", Method.GET);
+            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
 
-            // or automatically deserialize result
-            // return content type is sniffed but can be explicitly set via RestClient.AddHandler();
-            RestResponse<VersionsResponse> response2 = httpReply.Execute<VersionsResponse>(request);
+            var response = httpReply.Execute(request);
+            var content = response.Content;
+            var response2 = httpReply.Execute<List<VersionsResponse>>(request);
+
             return response2.Data;
         }
 

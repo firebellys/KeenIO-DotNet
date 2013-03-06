@@ -5,26 +5,19 @@ using System.Text;
 
 namespace KeenClient_DotNet
 {
+
+
     class KeenContants
     {
+// ReSharper disable InconsistentNaming
+           public static String SERVER_ADDRESS = "https://api.keen.io";
+
+           public static String API_VERSION = "3.0";
+// ReSharper restore InconsistentNaming
 
     }
     public class UrLs
     {
-        public static string VersionURL = "http://keen.IO";
-        public static string VersionURL2 = "http://keen.IO";
-        public static string VersionURL3 = "http://keen.IO";
-        public static string VersionURL4 = "http://keen.IO";
+        public static string VersionURL = KeenContants.SERVER_ADDRESS;
     }
-
-    public enum RequestTypes
-    {
-        Sat = 1,
-        Sun,
-        Mon,
-        Tue,
-        Wed,
-        Thu,
-        Fri
-    };
 }

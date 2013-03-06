@@ -1,6 +1,10 @@
-C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\KeenClient DotNet.dll
-C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\KeenClient DotNet.pdb
-C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\obj\Debug\KeenClient DotNet.dll
-C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\obj\Debug\KeenClient DotNet.pdb
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\KeenClient-DotNet.dll
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\KeenClient-DotNet.pdb
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\KeenClient-DotNet.dll.CodeAnalysisLog.xml
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\KeenClient-DotNet.dll.lastcodeanalysissucceeded
 C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\RestSharp.dll
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\RestSharp.xml
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\obj\Debug\KeenClient-DotNet.dll
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\obj\Debug\KeenClient-DotNet.pdb
 C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\obj\Debug\KeenClient DotNet.csprojResolveAssemblyReference.cache

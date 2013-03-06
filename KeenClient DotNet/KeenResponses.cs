@@ -10,10 +10,11 @@ namespace KeenClient_DotNet
     }
     public class VersionsResponse
     {
-        public string IsPublic { get; set; }
-        public string Url { get; set; }
-        public string Version { get; set; }
-        public string ErrorMessage { get; set; }
+        public bool is_public { get; set; }
+        public string url { get; set; }
+        public string version { get; set; }
+        public string error_code { get; set; }
+        public string message { get; set; }
     }
 
 }

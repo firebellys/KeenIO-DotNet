@@ -8,10 +8,21 @@ namespace KeenIODotNet_Tests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestVersionCall()
         {
-            var keenTestClient = new KeenClient_DotNet.KeenIO();
-            keenTestClient.Average();
+            var keenTestClient = new KeenIO();
+            var result = keenTestClient.GetVersions();
+            foreach (var versionsResponse in result)
+            {
+                Console.Write(versionsResponse.error_code);
+                Console.Write(versionsResponse.message);
+                Console.Write(versionsResponse.is_public);
+                if (!String.IsNullOrEmpty(versionsResponse.error_code))
+                {
+                    throw new Exception("Failed to get Version.");
+                }
+            }
+
         }
     }
 }
