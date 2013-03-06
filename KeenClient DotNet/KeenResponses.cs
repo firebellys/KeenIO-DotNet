@@ -8,12 +8,12 @@ namespace KeenClient_DotNet
     class KeenResponses
     {
     }
-    public class VersionResponse
+    public class VersionsResponse
     {
-        public static string IsPublic { get; set; }
-        public static string url { get; set; }
-        public static string version { get; set; }
+        public string IsPublic { get; set; }
+        public string Url { get; set; }
+        public string Version { get; set; }
+        public string ErrorMessage { get; set; }
     }
-
 
 }
