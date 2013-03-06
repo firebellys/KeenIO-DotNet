@@ -5,31 +5,44 @@ namespace KeenClient_DotNet
 {
     public class KeenIO
     {
-        //public static HttpWebClient _KeenWebClient;
+
+        private readonly RestClient _restClient = new RestClient(KeenContants.SERVER_ADDRESS);
+
         /// <summary>
         /// Versionses this instance.
         /// </summary>
+        /// <returns>A list of Version replies.</returns>
         public List<VersionsResponse> GetVersions()
         {
-
-            var httpReply = new RestClient(UrLs.VersionURL);
-
-            var request = new RestRequest("/?api_key=1FA4C5505E789A12EA97BBC73394F830", Method.GET);
+            var request = new RestRequest("/?api_key=" + KeenContants.API_KEY, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
-
-            var response = httpReply.Execute(request);
+            var response = _restClient.Execute(request);
             var content = response.Content;
-            var response2 = httpReply.Execute<List<VersionsResponse>>(request);
-
-            return response2.Data;
+            var deserializedReply = _restClient.Execute<List<VersionsResponse>>(request);
+            return deserializedReply.Data;
         }
 
-        public void GetDiscovery()
+        /// <summary>
+        /// Gets the discovery.
+        /// </summary>
+        /// <returns></returns>
+        public List<DiscoveryResponse> GetDiscovery()
         {
-
+            var request = new RestRequest("/" + KeenContants.API_VERSION + "?api_key=" + KeenContants.API_KEY, Method.GET);
+            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
+            var response = _restClient.Execute(request);
+            var content = response.Content;
+            var deserializedReply = _restClient.Execute<List<DiscoveryResponse>>(request);
+            return deserializedReply.Data;
         }
-        public void GetProjects()
+        public List<ProjectsResponse> GetProjects()
         {
+            var request = new RestRequest("/" + KeenContants.API_VERSION + "projects/?api_key=" + KeenContants.API_KEY, Method.GET);
+            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
+            var response = _restClient.Execute(request);
+            var content = response.Content;
+            var deserializedReply = _restClient.Execute<List<ProjectsResponse>>(request);
+            return deserializedReply.Data;
         }
         public void GetProjectRow()
         {
