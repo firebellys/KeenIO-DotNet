@@ -81,7 +81,7 @@ namespace KeenIODotNet_Tests
         public void TestEventCall()
         {
             var keenTestClient = new KeenIO();
-            var result = keenTestClient.GetEvent(Method.GET);
+            var result = keenTestClient.GetEvent();
             foreach (var eventResponse in result)
             {
                 Console.WriteLine(eventResponse.error_code);
@@ -91,7 +91,6 @@ namespace KeenIODotNet_Tests
                     throw new Exception("Failed to get Directory.");
                 }
             }
-
         }
     }
 }

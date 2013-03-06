@@ -9,6 +9,10 @@ namespace KeenClient_DotNet
     class KeenResponses
     {
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
     public class VersionsResponse
     {
         public bool is_public { get; set; }
@@ -19,6 +23,10 @@ namespace KeenClient_DotNet
         public string error_code { get; set; }
         public string message { get; set; }
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
     public class DiscoveryResponse
     {
         public string projects_resource_url { get; set; }
@@ -64,47 +72,31 @@ namespace KeenClient_DotNet
         public string message { get; set; }
     }
 
-    //    [
-    //  {
-    //    "name": "TestEvents", 
-    //    "properties": {
-    //      "erikTest.timestamp": "string", 
-    //      "itemid": "num", 
-    //      "keen.created_at": "datetime", 
-    //      "keen.timestamp": "datetime", 
-    //      "type": "string", 
-    //      "x_coord": "num", 
-    //      "y_coord": "num"
-    //    }, 
-    //    "url": "/3.0/projects/e159853dd9a9463892c5354e1830c59b/events/TestEvents"
-    //  }
-    //]
-    public class EventResponse
+    public class GetEventResponse
     {
-        public List<FullEvent> FullEvents { get; set; }
+        public string name { get; set; }
+        public Dictionary<string, string> properties { get; set; }
+        public string url;
 
         // Error containers
         public string error_code { get; set; }
         public string message { get; set; }
 
     }
-    public class FullEvent
+    public class SetEventResponse
     {
-        public string name { get; set; }
-        public List<eventProps> properties { get; set; }
-        public string url;
+        public bool created { get; set; }
+
+        // Error containers
+        public string error_code { get; set; }
+        public string message { get; set; }
+
     }
-    [DataContract]
+
     public class eventProps
     {
-
-        public int quantity { get; set; }
-        [DataMember(Name = "item.id")]
-        public string itemID { get; set; }
-        [DataMember(Name = "screen.name")]
-        public string screenName { get; set; }
-
-        public string user { get; set; }
+        public string name { get; set; }
+        public string value { get; set; }
     }
 
 
