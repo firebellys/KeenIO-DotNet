@@ -1,0 +1,4 @@
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\KeenClient DotNet.dll
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\bin\Debug\KeenClient DotNet.pdb
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\obj\Debug\KeenClient DotNet.dll
+C:\Users\Erik\Dropbox\Software Development\KeenClient-DotNet\KeenClient DotNet\KeenClient DotNet\obj\Debug\KeenClient DotNet.pdb

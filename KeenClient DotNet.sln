@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeenClient DotNet", "KeenClient DotNet\KeenClient DotNet.csproj", "{7CCFE1D5-7182-4D98-B5D2-92808143459B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeenIODotNet Tests", "KeenIODotNet Tests\KeenIODotNet Tests.csproj", "{1A8ED93B-FB86-4F82-BF18-D2A0560C33E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{7CCFE1D5-7182-4D98-B5D2-92808143459B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CCFE1D5-7182-4D98-B5D2-92808143459B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CCFE1D5-7182-4D98-B5D2-92808143459B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8ED93B-FB86-4F82-BF18-D2A0560C33E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8ED93B-FB86-4F82-BF18-D2A0560C33E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8ED93B-FB86-4F82-BF18-D2A0560C33E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8ED93B-FB86-4F82-BF18-D2A0560C33E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

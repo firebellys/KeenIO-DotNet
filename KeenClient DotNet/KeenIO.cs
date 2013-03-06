@@ -12,9 +12,12 @@ namespace KeenClient_DotNet
         /// </summary>
         public void Versions()
         {
-            var temnpTest1 = new VersionResponse();
+            var reply = CallKeenWebService();
+        }
 
-
+        private object CallKeenWebService()
+        {
+            throw new NotImplementedException();
         }
         public void Discovery()
         {
