@@ -95,17 +95,21 @@ namespace KeenClient_DotNet
         public string message { get; set; }
 
     }
-    public class SetEventResponse
+    public class InsertEventResponse
     {
-        public bool created { get; set; }
+        public List<InsertEventResponseStatus> items { get; set; }
 
         // Error containers
         public string error_code { get; set; }
         public string message { get; set; }
-
     }
 
-    public class eventProps
+    public class InsertEventResponseStatus
+    {
+        public Dictionary<String, bool> status { get; set; }
+    }
+
+    public class EventProperties
     {
         public string name { get; set; }
         public string value { get; set; }

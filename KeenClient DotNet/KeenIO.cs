@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Web.Script.Serialization;
 using RestSharp;
 using RestSharp.Serializers;
 
@@ -147,15 +148,31 @@ namespace KeenClient_DotNet
         /// Sets the event.
         /// </summary>
         /// <returns></returns>
-        public List<SetEventResponse> InsertEvent(InsertEventRequest requestObject)
+        public List<InsertEventResponse> InsertEvent(InsertEventRequest requestObject)
         {
+            var outputstring = "{\"item.key\":[{\"keen\":{\"timestamp\":datetimenow\"created_at\" : datetimenow},\"name\": value}";
+            foreach (var item in requestObject)
+            {
+                outputstring += item.Key;
+
+                var tempEvent = new InsertEvent();
+                tempEvent = item.Value;
+                foreach (var thing in tempEvent.properties)
+                {
+                    outputstring += thing.name;
+                    outputstring += thing.value;
+                }
+
+            }
+
+
             var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/events?api_key=" + _apiKey, Method.POST);
             request.JsonSerializer = new JsonSerializer();
             request.RequestFormat = DataFormat.Json;
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
             request.AddBody(requestObject);
             _restClient.Authenticator = new HttpBasicAuthenticator("api_key", _apiKey);
-            var deserializedReply = _restClient.Execute<List<SetEventResponse>>(request);
+            var deserializedReply = _restClient.Execute<List<InsertEventResponse>>(request);
             return deserializedReply.Data;
         }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace KeenClient_DotNet
@@ -12,21 +13,16 @@ namespace KeenClient_DotNet
     /// <summary>
     /// 
     /// </summary>
-    public class InsertEventRequest
+    [DataContract]
+    public class InsertEventRequest : Dictionary<String, InsertEvent>
     {
-        public List<InsertEvent> events { get; set; }
-        public List<InsertEventRequest> nestedEvents { get; set; }
-        public InsertEventRequest()
-        {
-            events = new List<InsertEvent>();
-            nestedEvents = new List<InsertEventRequest>();
-        }
+        //public Dictionary<String, InsertEvent> properties { get; set; }
     }
 
-    public class InsertEvent
+    public class InsertEvent 
     {
-        public List<KeenTimeStamp> keen { get; set; }
-        public Dictionary<string, object> properties { get; set; }
+        public List<EventRequestProperties> properties { get; set; }
+        public KeenTimeStamp keen { get; set; }
     }
 
     public class KeenTimeStamp
@@ -43,6 +39,11 @@ namespace KeenClient_DotNet
             events = new List<InsertEvent>();
             nestedEvents = new List<InsertEventRequest>();
         }
+    }
+    public class EventRequestProperties
+    {
+        public string name { get; set; }
+        public string value { get; set; }
     }
 
 }

@@ -150,23 +150,31 @@ namespace KeenIODotNet_Tests
             var keenTestClient = new KeenIO();
             keenTestClient.SetAPIKey("1FA4C5505E789A12EA97BBC73394F830");
             keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
-            var sampleEvent1 = new InsertEvent();
-            sampleEvent1.properties = new Dictionary<String, object>();
-            sampleEvent1.properties.Add("TestProp1", 1234);
-            sampleEvent1.properties.Add("TestProp2", "Stuff");
-            sampleEvent1.properties.Add("TestProp3", "things");
 
-            var reqestObject = new InsertEventRequest();
-            reqestObject.events = new List<InsertEvent>();
-            reqestObject.events.Add(sampleEvent1);
-            reqestObject.events.Add(sampleEvent1);
-            reqestObject.events.Add(sampleEvent1);
-            var nonNestedRequest = reqestObject;
-            reqestObject.nestedEvents = new List<InsertEventRequest>();
-            reqestObject.nestedEvents.Add(nonNestedRequest);
-            reqestObject.nestedEvents.Add(nonNestedRequest);
-            reqestObject.nestedEvents.Add(nonNestedRequest);
-            var result = keenTestClient.InsertEvent(reqestObject);
+            var testRequest = new InsertEventRequest();
+
+
+            var samepleEvents = new InsertEvent();
+            samepleEvents.keen = new KeenTimeStamp() { created_at = DateTime.Now, timestamp = DateTime.Now };
+
+            var props = new EventRequestProperties();
+            props.name = "sameple1";
+            props.value = "value 2";
+
+            samepleEvents.properties = new List<EventRequestProperties>();
+            samepleEvents.properties.Add(props);
+            props.name = "sameple4";
+            props.value = "value 4";
+            samepleEvents.properties.Add(props);
+            props.name = "sameple5";
+            props.value = "value 6";
+            samepleEvents.properties.Add(props);
+
+            testRequest.Add("Purchases", samepleEvents);
+            testRequest.Add("Memes", samepleEvents);
+            testRequest.Add("Dogs", samepleEvents);
+
+            var result = keenTestClient.InsertEvent(testRequest);
             if (result == null)
             {
                 throw new Exception("No data.");
