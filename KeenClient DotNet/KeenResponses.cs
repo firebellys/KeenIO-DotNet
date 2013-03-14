@@ -83,6 +83,18 @@ namespace KeenClient_DotNet
         public string message { get; set; }
 
     }
+
+    public class GetEventCollectionResponse
+    {
+        public string name { get; set; }
+        public Dictionary<string, string> properties { get; set; }
+        public string url;
+
+        // Error containers
+        public string error_code { get; set; }
+        public string message { get; set; }
+
+    }
     public class SetEventResponse
     {
         public bool created { get; set; }

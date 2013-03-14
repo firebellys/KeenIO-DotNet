@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using KeenClient_DotNet;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
@@ -12,7 +13,13 @@ namespace KeenIODotNet_Tests
         public void TestVersionCall()
         {
             var keenTestClient = new KeenIO();
+            keenTestClient.SetAPIKey("1FA4C5505E789A12EA97BBC73394F830");
+            keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
             var result = keenTestClient.GetVersions();
+            if (result == null)
+            {
+                throw new Exception("No data.");
+            }
             foreach (var versionsResponse in result)
             {
                 Console.WriteLine(versionsResponse.error_code);
@@ -29,7 +36,13 @@ namespace KeenIODotNet_Tests
         public void TestDiscoveryCall()
         {
             var keenTestClient = new KeenIO();
+            keenTestClient.SetAPIKey("1FA4C5505E789A12EA97BBC73394F830");
+            keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
             var result = keenTestClient.GetDiscovery();
+            if (result == null)
+            {
+                throw new Exception("No data.");
+            }
             foreach (var discoveryResponse in result)
             {
                 Console.WriteLine(discoveryResponse.error_code);
@@ -46,7 +59,13 @@ namespace KeenIODotNet_Tests
         public void TestProjectsCall()
         {
             var keenTestClient = new KeenIO();
+            keenTestClient.SetAPIKey("1FA4C5505E789A12EA97BBC73394F830");
+            keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
             var result = keenTestClient.GetDiscovery();
+            if (result == null)
+            {
+                throw new Exception("No data.");
+            }
             foreach (var projectsResponse in result)
             {
                 Console.WriteLine(projectsResponse.error_code);
@@ -64,7 +83,13 @@ namespace KeenIODotNet_Tests
         public void TestProjectRowCall()
         {
             var keenTestClient = new KeenIO();
+            keenTestClient.SetAPIKey("1FA4C5505E789A12EA97BBC73394F830");
+            keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
             var result = keenTestClient.GetDiscovery();
+            if (result == null)
+            {
+                throw new Exception("No data.");
+            }
             foreach (var projectRowResponse in result)
             {
                 Console.WriteLine(projectRowResponse.error_code);
@@ -78,10 +103,74 @@ namespace KeenIODotNet_Tests
 
         }
         [TestMethod]
-        public void TestEventCall()
+        public void TestGetEventCall()
         {
             var keenTestClient = new KeenIO();
+            keenTestClient.SetAPIKey("1FA4C5505E789A12EA97BBC73394F830");
+            keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
             var result = keenTestClient.GetEvent();
+            if (result == null)
+            {
+                throw new Exception("No data.");
+            }
+            foreach (var eventResponse in result)
+            {
+                Console.WriteLine(eventResponse.error_code);
+                Console.WriteLine(eventResponse.message);
+                if (!String.IsNullOrEmpty(eventResponse.error_code))
+                {
+                    throw new Exception("Failed to get Directory.");
+                }
+            }
+        }
+        [TestMethod]
+        public void TestGetEventCollectionCall()
+        {
+            var keenTestClient = new KeenIO();
+            keenTestClient.SetAPIKey("1FA4C5505E789A12EA97BBC73394F830");
+            keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
+            var result = keenTestClient.GetEventCollection("TestEvents");
+            if (result == null)
+            {
+                throw new Exception("No data.");
+            }
+            foreach (var eventResponse in result)
+            {
+                Console.WriteLine(eventResponse.error_code);
+                Console.WriteLine(eventResponse.message);
+                if (!String.IsNullOrEmpty(eventResponse.error_code))
+                {
+                    throw new Exception("Failed to get Directory.");
+                }
+            }
+        }
+        [TestMethod]
+        public void TestInsertEvent()
+        {
+            var keenTestClient = new KeenIO();
+            keenTestClient.SetAPIKey("1FA4C5505E789A12EA97BBC73394F830");
+            keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
+            var sampleEvent1 = new InsertEvent();
+            sampleEvent1.properties = new Dictionary<String, object>();
+            sampleEvent1.properties.Add("TestProp1", 1234);
+            sampleEvent1.properties.Add("TestProp2", "Stuff");
+            sampleEvent1.properties.Add("TestProp3", "things");
+
+            var reqestObject = new InsertEventRequest();
+            reqestObject.events = new List<InsertEvent>();
+            reqestObject.events.Add(sampleEvent1);
+            reqestObject.events.Add(sampleEvent1);
+            reqestObject.events.Add(sampleEvent1);
+            var nonNestedRequest = reqestObject;
+            reqestObject.nestedEvents = new List<InsertEventRequest>();
+            reqestObject.nestedEvents.Add(nonNestedRequest);
+            reqestObject.nestedEvents.Add(nonNestedRequest);
+            reqestObject.nestedEvents.Add(nonNestedRequest);
+            var result = keenTestClient.InsertEvent(reqestObject);
+            if (result == null)
+            {
+                throw new Exception("No data.");
+            }
             foreach (var eventResponse in result)
             {
                 Console.WriteLine(eventResponse.error_code);
