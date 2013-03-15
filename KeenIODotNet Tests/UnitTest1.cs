@@ -147,41 +147,93 @@ namespace KeenIODotNet_Tests
         [TestMethod]
         public void TestInsertEvent()
         {
+            //var keenTestClient = new KeenIO();
+            //keenTestClient.SetAPIKey("1FA4C5505E789A12EA97BBC73394F830");
+            //keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
+
+            //var testRequest = new InsertEventRequest();
+            
+            //var samepleEvents = new InsertEvent();
+            //samepleEvents.keen = new KeenTimeStamp() { created_at = DateTime.Now, timestamp = DateTime.Now, setDateTime = true, setTimeStamp = true};
+            
+            //samepleEvents.properties = new List<EventRequestProperties>();
+            //var props = new EventRequestProperties();
+            //props.name = "sameple1";
+            //props.value = "value 2";
+            //samepleEvents.properties.Add(props);
+
+            //props = new EventRequestProperties();
+            //props.name = "sameple4";
+            //props.value = 123455;
+            //samepleEvents.properties.Add(props);
+
+            //props = new EventRequestProperties();
+            //props.name = "sameple5";
+            //props.value = DateTime.Now;
+            //samepleEvents.properties.Add(props);
+
+            //var listOfEvents = new List<InsertEvent>();
+
+            //listOfEvents.Add(samepleEvents);
+            //listOfEvents.Add(samepleEvents);
+
+            //testRequest.Add("Purchases", listOfEvents);
+            //testRequest.Add("Memes", listOfEvents);
+            //testRequest.Add("Dogs", listOfEvents);
+
+            //var result = keenTestClient.InsertEvent(testRequest);
+            //if (result == null)
+            //{
+            //    throw new Exception("No data.");
+            //}
+            //foreach (var eventResponse in result)
+            //{
+            //    Console.WriteLine(eventResponse.error_code);
+            //    Console.WriteLine(eventResponse.message);
+            //    if (!String.IsNullOrEmpty(eventResponse.error_code))
+            //    {
+            //        throw new Exception("Failed to get Directory.");
+            //    }
+            //}
+        }
+        [TestMethod]
+        public void TestInsertEventCollection()
+        {
             var keenTestClient = new KeenIO();
             keenTestClient.SetAPIKey("1FA4C5505E789A12EA97BBC73394F830");
             keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
 
-            var testRequest = new InsertEventRequest();
-            
-            var samepleEvents = new InsertEvent();
-            samepleEvents.keen = new KeenTimeStamp() { created_at = DateTime.Now, timestamp = DateTime.Now, setDateTime = true, setTimeStamp = true};
-            
-            samepleEvents.properties = new List<EventRequestProperties>();
+            var testRequest = new InsertEventCollectionRequest();
+            testRequest.keen = new KeenTimeStamp() { created_at = DateTime.Now, timestamp = DateTime.Now, setDateTime = true, setTimeStamp = true };
+            testRequest.properties = new List<EventRequestProperties>();
             var props = new EventRequestProperties();
             props.name = "sameple1";
             props.value = "value 2";
-            samepleEvents.properties.Add(props);
+            testRequest.properties.Add(props);
 
             props = new EventRequestProperties();
             props.name = "sameple4";
             props.value = 123455;
-            samepleEvents.properties.Add(props);
+            testRequest.properties.Add(props);
 
             props = new EventRequestProperties();
             props.name = "sameple5";
             props.value = DateTime.Now;
-            samepleEvents.properties.Add(props);
+            testRequest.properties.Add(props);
 
-            var listOfEvents = new List<InsertEvent>();
+            testRequest.collectionName = "";
+            testRequest.eventName = "testEventName";
 
-            listOfEvents.Add(samepleEvents);
-            listOfEvents.Add(samepleEvents);
+            //var listOfEvents = new List<InsertEvent>();
 
-            testRequest.Add("Purchases", listOfEvents);
-            testRequest.Add("Memes", listOfEvents);
-            testRequest.Add("Dogs", listOfEvents);
+            //listOfEvents.Add(samepleEvents);
+            //listOfEvents.Add(samepleEvents);
 
-            var result = keenTestClient.InsertEvent(testRequest);
+            //testRequest.Add("Purchases", listOfEvents);
+            //testRequest.Add("Memes", listOfEvents);
+            //testRequest.Add("Dogs", listOfEvents);
+
+            var result = keenTestClient.InsertEventCollection(testRequest);
             if (result == null)
             {
                 throw new Exception("No data.");

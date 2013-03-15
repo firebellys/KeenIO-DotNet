@@ -13,12 +13,18 @@ namespace KeenClient_DotNet
     /// <summary>
     /// 
     /// </summary>
-    [DataContract]
+
     public class InsertEventRequest : Dictionary<String, List<InsertEvent>>
     {
 
     }
 
+    public class InsertEventCollectionRequest : InsertEvent
+    {
+        public string eventName { get; set; }
+        public string collectionName { get; set; }
+    }
+    
     /// <summary>
     /// 
     /// </summary>
@@ -43,16 +49,16 @@ namespace KeenClient_DotNet
         public DateTime created_at { get; set; }
         public DateTime timestamp { get; set; }
     }
-    public class InsertEventCollectionRequest
-    {
-        public List<InsertEvent> events { get; set; }
-        public List<InsertEventRequest> nestedEvents { get; set; }
-        public InsertEventCollectionRequest()
-        {
-            events = new List<InsertEvent>();
-            nestedEvents = new List<InsertEventRequest>();
-        }
-    }
+    //public partial class InsertEventCollectionRequest
+    //{
+    //    public List<InsertEvent> events { get; set; }
+    //    public List<InsertEventRequest> nestedEvents { get; set; }
+    //    public InsertEventCollectionRequest()
+    //    {
+    //        events = new List<InsertEvent>();
+    //        nestedEvents = new List<InsertEventRequest>();
+    //    }
+    //}
 
 
 }

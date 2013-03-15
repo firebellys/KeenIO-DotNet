@@ -236,8 +236,54 @@ namespace KeenClient_DotNet
             var deserializedReply = _restClient.Execute<List<GetEventCollectionResponse>>(request);
             return deserializedReply.Data;
         }
-        public void InsertEventCollection()
+
+
+        public List<InsertEventCollectionResponse> InsertEventCollection(InsertEventCollectionRequest requestObject)
         {
+            var js = new JsonSerializer();
+            var tempsadsd = js.Serialize(requestObject);
+            //Build the JSON from scratch as the serializer will break it.
+            var outputstring = new System.Text.StringBuilder();
+            outputstring.Append("{");
+            outputstring.Append("\"").Append(requestObject.eventName).Append("\":{");
+
+            if (requestObject.keen != null && (requestObject.keen.setTimeStamp || requestObject.keen.setDateTime))
+            {
+                outputstring.Append("\"keen\":{");
+                if (requestObject.keen.setDateTime)
+                {
+                    outputstring.Append("\"created_at\":").Append(js.Serialize(requestObject.keen.created_at));
+                    if (requestObject.keen.setTimeStamp)
+                    {
+                        outputstring.Append(",");
+                    }
+                }
+                if (requestObject.keen.setTimeStamp)
+                {
+                    outputstring.Append("\"timestamp\":").Append(js.Serialize(requestObject.keen.timestamp));
+                }
+                outputstring.Append("},");
+            }
+
+            var propCounter = 0;
+            foreach (var properties in requestObject.properties)
+            {
+                outputstring.Append("\"" + properties.name + "\"").Append(":");
+                var serializedString = js.Serialize(properties.value);
+                outputstring.Append(serializedString);
+                if (requestObject.properties.Count > 1 && propCounter != requestObject.properties.Count - 1)
+                {
+                    outputstring.Append(",");
+                }
+                propCounter++;
+            }
+            outputstring.Append("}}");
+            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/events/"+requestObject.collectionName+"?api_key=" + _apiKey, Method.POST);
+            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
+            request.AddBody(outputstring.ToString());
+            _restClient.Authenticator = new HttpBasicAuthenticator("api_key", _apiKey);
+            var deserializedReply = _restClient.Execute<List<InsertEventCollectionResponse>>(request);
+            return deserializedReply.Data;
         }
         public void GetQueries()
         {
