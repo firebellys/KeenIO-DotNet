@@ -14,19 +14,32 @@ namespace KeenClient_DotNet
     /// 
     /// </summary>
     [DataContract]
-    public class InsertEventRequest : Dictionary<String, InsertEvent>
+    public class InsertEventRequest : Dictionary<String, List<InsertEvent>>
     {
-        //public Dictionary<String, InsertEvent> properties { get; set; }
+
     }
 
-    public class InsertEvent 
+    /// <summary>
+    /// 
+    /// </summary>
+    public class InsertEvent
     {
         public List<EventRequestProperties> properties { get; set; }
         public KeenTimeStamp keen { get; set; }
     }
 
+    /// <summary>
+    /// Only allows for base types, string, int, datetime, bool.
+    /// </summary>
+    public class EventRequestProperties
+    {
+        public string name { get; set; }
+        public object value { get; set; }
+    }
     public class KeenTimeStamp
     {
+        public bool setTimeStamp { get; set; }
+        public bool setDateTime { get; set; }
         public DateTime created_at { get; set; }
         public DateTime timestamp { get; set; }
     }
@@ -40,11 +53,7 @@ namespace KeenClient_DotNet
             nestedEvents = new List<InsertEventRequest>();
         }
     }
-    public class EventRequestProperties
-    {
-        public string name { get; set; }
-        public string value { get; set; }
-    }
+
 
 }
 

@@ -152,27 +152,34 @@ namespace KeenIODotNet_Tests
             keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
 
             var testRequest = new InsertEventRequest();
-
-
+            
             var samepleEvents = new InsertEvent();
-            samepleEvents.keen = new KeenTimeStamp() { created_at = DateTime.Now, timestamp = DateTime.Now };
-
+            samepleEvents.keen = new KeenTimeStamp() { created_at = DateTime.Now, timestamp = DateTime.Now, setDateTime = true, setTimeStamp = true};
+            
+            samepleEvents.properties = new List<EventRequestProperties>();
             var props = new EventRequestProperties();
             props.name = "sameple1";
             props.value = "value 2";
-
-            samepleEvents.properties = new List<EventRequestProperties>();
             samepleEvents.properties.Add(props);
+
+            props = new EventRequestProperties();
             props.name = "sameple4";
-            props.value = "value 4";
-            samepleEvents.properties.Add(props);
-            props.name = "sameple5";
-            props.value = "value 6";
+            props.value = 123455;
             samepleEvents.properties.Add(props);
 
-            testRequest.Add("Purchases", samepleEvents);
-            testRequest.Add("Memes", samepleEvents);
-            testRequest.Add("Dogs", samepleEvents);
+            props = new EventRequestProperties();
+            props.name = "sameple5";
+            props.value = DateTime.Now;
+            samepleEvents.properties.Add(props);
+
+            var listOfEvents = new List<InsertEvent>();
+
+            listOfEvents.Add(samepleEvents);
+            listOfEvents.Add(samepleEvents);
+
+            testRequest.Add("Purchases", listOfEvents);
+            testRequest.Add("Memes", listOfEvents);
+            testRequest.Add("Dogs", listOfEvents);
 
             var result = keenTestClient.InsertEvent(testRequest);
             if (result == null)

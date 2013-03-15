@@ -150,27 +150,72 @@ namespace KeenClient_DotNet
         /// <returns></returns>
         public List<InsertEventResponse> InsertEvent(InsertEventRequest requestObject)
         {
-            var outputstring = "{\"item.key\":[{\"keen\":{\"timestamp\":datetimenow\"created_at\" : datetimenow},\"name\": value}";
+            var js = new JsonSerializer();
+            var tempsadsd = js.Serialize(requestObject);
+            //Build the JSON from scratch as the serializer will break it.
+            var outputstring = new System.Text.StringBuilder();
+            outputstring.Append("{");
+
+            var collectionCounter = 0;
             foreach (var item in requestObject)
             {
-                outputstring += item.Key;
+                outputstring.Append("\"").Append(item.Key).Append("\":[");
 
-                var tempEvent = new InsertEvent();
-                tempEvent = item.Value;
-                foreach (var thing in tempEvent.properties)
-                {
-                    outputstring += thing.name;
-                    outputstring += thing.value;
+                var listOfEvents = item.Value;
+                var eventCounter = 0;
+                foreach (var singleEvent in listOfEvents)
+                {    
+                    outputstring.Append("{");
+                    if (singleEvent.keen != null && (singleEvent.keen.setTimeStamp || singleEvent.keen.setDateTime))
+                    {
+                        outputstring.Append("\"keen\":{");
+                        if (singleEvent.keen.setDateTime)
+                        {
+                            outputstring.Append("\"created_at\":").Append(js.Serialize(singleEvent.keen.created_at));
+                            if (singleEvent.keen.setTimeStamp)
+                            {
+                                outputstring.Append(",");
+                            }
+                        }
+                        if (singleEvent.keen.setTimeStamp)
+                        {
+                            outputstring.Append("\"timestamp\":").Append(js.Serialize(singleEvent.keen.timestamp));
+                        }
+                        outputstring.Append("},");
+                    }
+
+                    var propCounter = 0;
+                    foreach (var properties in singleEvent.properties)
+                    {
+                        outputstring.Append("\"" + properties.name + "\"").Append(":");
+                        var serializedString = js.Serialize(properties.value);
+                        outputstring.Append(serializedString);
+                        if (singleEvent.properties.Count > 1 && propCounter != singleEvent.properties.Count - 1)
+                        {
+                            outputstring.Append(",");
+                        }
+                        propCounter++;
+                    }
+                    outputstring.Append("}");
+                    if (listOfEvents.Count > 1 && eventCounter != listOfEvents.Count - 1)
+                    {
+                        outputstring.Append(",");
+                    }
+                    eventCounter++;
                 }
+                outputstring.Append("]");
+                if (requestObject.Count > 1 && collectionCounter != requestObject.Count - 1)
+                {
+                    outputstring.Append(",");
+                }
+                collectionCounter++;
 
             }
-
+            outputstring.Append("}");
 
             var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/events?api_key=" + _apiKey, Method.POST);
-            request.JsonSerializer = new JsonSerializer();
-            request.RequestFormat = DataFormat.Json;
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
-            request.AddBody(requestObject);
+            request.AddBody(outputstring.ToString());
             _restClient.Authenticator = new HttpBasicAuthenticator("api_key", _apiKey);
             var deserializedReply = _restClient.Execute<List<InsertEventResponse>>(request);
             return deserializedReply.Data;
