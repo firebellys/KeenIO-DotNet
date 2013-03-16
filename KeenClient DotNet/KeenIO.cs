@@ -71,7 +71,7 @@ namespace KeenClient_DotNet
         }
 
         /// <summary>
-        /// The _rest client
+        /// 
         /// </summary>
         private readonly RestClient _restClient = new RestClient(KeenContants.SERVER_ADDRESS);
 
@@ -79,7 +79,7 @@ namespace KeenClient_DotNet
         /// Versionses this instance.
         /// </summary>
         /// <returns>A list of Version replies.</returns>
-        public List<VersionsResponse> GetVersions()
+        private List<VersionsResponse> GetVersions()
         {
             var request = new RestRequest("/?api_key=" + _apiKey, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
@@ -93,7 +93,7 @@ namespace KeenClient_DotNet
         /// Gets the discovery.
         /// </summary>
         /// <returns></returns>
-        public List<DiscoveryResponse> GetDiscovery()
+        private List<DiscoveryResponse> GetDiscovery()
         {
             var request = new RestRequest("/" + _apiVersion + "?api_key=" + _apiKey, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
@@ -107,7 +107,7 @@ namespace KeenClient_DotNet
         /// Gets the projects.
         /// </summary>
         /// <returns></returns>
-        public List<ProjectsResponse> GetProjects()
+        private List<ProjectsResponse> GetProjects()
         {
             var request = new RestRequest("/" + _apiVersion + "/projects?api_key=" + _apiKey, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
@@ -121,7 +121,7 @@ namespace KeenClient_DotNet
         /// Gets the project row.
         /// </summary>
         /// <returns></returns>
-        public List<ProjectRowResponse> GetProjectRow()
+        private List<ProjectRowResponse> GetProjectRow()
         {
             var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "?api_key=" + _apiKey, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
@@ -147,7 +147,7 @@ namespace KeenClient_DotNet
         /// <summary>
         /// Sets the event.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A list of InsertEvenResponses</returns>
         public List<InsertEventResponse> InsertEvent(InsertEventRequest requestObject)
         {
             var js = new JsonSerializer();
@@ -164,7 +164,7 @@ namespace KeenClient_DotNet
                 var listOfEvents = item.Value;
                 var eventCounter = 0;
                 foreach (var singleEvent in listOfEvents)
-                {    
+                {
                     outputstring.Append("{");
                     if (singleEvent.keen != null && (singleEvent.keen.setTimeStamp || singleEvent.keen.setDateTime))
                     {
@@ -237,7 +237,11 @@ namespace KeenClient_DotNet
             return deserializedReply.Data;
         }
 
-
+        /// <summary>
+        /// Inserts the event collection.
+        /// </summary>
+        /// <param name="requestObject">The request object.</param>
+        /// <returns></returns>
         public List<InsertEventCollectionResponse> InsertEventCollection(InsertEventCollectionRequest requestObject)
         {
             var js = new JsonSerializer();
@@ -278,50 +282,50 @@ namespace KeenClient_DotNet
                 propCounter++;
             }
             outputstring.Append("}}");
-            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/events/"+requestObject.collectionName+"?api_key=" + _apiKey, Method.POST);
+            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/events/" + requestObject.collectionName + "?api_key=" + _apiKey, Method.POST);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
             request.AddBody(outputstring.ToString());
             _restClient.Authenticator = new HttpBasicAuthenticator("api_key", _apiKey);
             var deserializedReply = _restClient.Execute<List<InsertEventCollectionResponse>>(request);
             return deserializedReply.Data;
         }
-        public void GetQueries()
+        private void GetQueries()
         {
         }
-        public void GetCount()
+        private void GetCount()
         {
         }
-        public void GetCountUnique()
+        private void GetCountUnique()
         {
         }
-        public void GetMinimum()
+        private void GetMinimum()
         {
         }
-        public void GetMaximum()
+        private void GetMaximum()
         {
         }
-        public void GetAverage()
+        private void GetAverage()
         {
         }
-        public void GetSum()
+        private void GetSum()
         {
         }
-        public void SelectUnique()
+        private void SelectUnique()
         {
         }
-        public void Extraction()
+        private void Extraction()
         {
         }
-        public void FunnelResource()
+        private void FunnelResource()
         {
         }
-        public void SavedQueriesList()
+        private void SavedQueriesList()
         {
         }
-        public void SavedQueryRow()
+        private void SavedQueryRow()
         {
         }
-        public void SavedQuieryRowResult()
+        private void SavedQuieryRowResult()
         {
         }
     }

@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="3242d4ee-3cc0-4dcd-a36b-f589f39243cf" Title="Keen IO" Url="html/d75eb659-6335-53f6-af7a-81814a21ab7f.htm">
+    <HelpTOCNode Id="660e118b-58a8-4aea-a35c-333e250b7e32" Title="KeenClient_DotNet Namespace" Url="html/3ae4af08-00b4-e0f0-9b64-d8597ee3fd09.htm">
+      <HelpTOCNode Id="a3f384d2-ff7c-42a8-bd40-95ad9c93a82c" Title="DiscoveryResponse Class" Url="html/1a5dce1c-3726-29ab-b3fa-9c7117b0fc0c.htm">
+        <HelpTOCNode Title="DiscoveryResponse Members" Url="html/8e956107-aa14-599d-4a30-099178795200.htm" />
+        <HelpTOCNode Title="DiscoveryResponse Constructor " Url="html/b2e9f539-10ba-4722-ed0e-231caf112653.htm" />
+        <HelpTOCNode Title="DiscoveryResponse Methods" Url="html/2590d9de-4c65-654d-0b84-15f2d6509350.htm" />
+        <HelpTOCNode Id="52e20521-12d0-4021-950a-37d2fdd74928" Title="DiscoveryResponse Properties" Url="html/d63d64f3-a42d-fb86-0cab-95b3590aae84.htm">
+          <HelpTOCNode Title="error_code Property " Url="html/32932eea-90a9-45db-ced7-42291d326b3c.htm" />
+          <HelpTOCNode Title="message Property " Url="html/41e7ef60-f3e1-e744-5080-8b809ebd37e3.htm" />
+          <HelpTOCNode Title="projects_resource_url Property " Url="html/ec9b92de-a87d-c708-efe8-eef398922b4f.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="dcb0504b-8424-442a-ad3f-6aeb370de7ed" Title="Event Class" Url="html/8c48ef57-2925-9996-3263-d44962b39b97.htm">
+        <HelpTOCNode Title="Event Members" Url="html/f4dac237-72d3-80be-5197-e95466934539.htm" />
+        <HelpTOCNode Title="Event Constructor " Url="html/07b4c2dc-d16f-8737-0b01-d3562298c008.htm" />
+        <HelpTOCNode Title="Event Methods" Url="html/4dc7a2d1-efd7-de82-86d7-e179d6b5eea3.htm" />
+        <HelpTOCNode Id="0b54f903-228f-4d8e-97e0-d0cd2a7d0656" Title="Event Properties" Url="html/41dee611-ac3c-2604-0808-05bced795eea.htm">
+          <HelpTOCNode Title="name Property " Url="html/73ad4a4a-17b9-ae68-2cf1-23cf7ef6d20f.htm" />
+          <HelpTOCNode Title="url Property " Url="html/aea68001-2271-165e-99c7-82c40e0a2d2c.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="c5e179f5-d3cf-4201-8fe1-5868b3888839" Title="EventProperties Class" Url="html/6f2cf5b9-7ae2-05b0-c27a-e70459b4560f.htm">
+        <HelpTOCNode Title="EventProperties Members" Url="html/4a607505-3f3f-ebe5-d6fa-0e0b9e2cd524.htm" />
+        <HelpTOCNode Title="EventProperties Constructor " Url="html/8151b7ff-bc2e-13a1-0893-ca0351bb3f12.htm" />
+        <HelpTOCNode Title="EventProperties Methods" Url="html/6129dcac-9a9a-c527-d73f-252849c050ad.htm" />
+        <HelpTOCNode Id="d7a85874-8d01-4d75-b95c-85149bfd19c6" Title="EventProperties Properties" Url="html/61ba1c00-653d-1f33-9100-70cf5b12f409.htm">
+          <HelpTOCNode Title="name Property " Url="html/d777bdfb-f011-5bd1-d3ab-f372dc265f0a.htm" />
+          <HelpTOCNode Title="value Property " Url="html/172198dd-cf48-4887-910f-084b49ec2691.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="7f2b2399-4a4c-43b3-9637-6d15e74d2e9a" Title="EventRequestProperties Class" Url="html/108689e6-122d-a258-1c54-f5d3affd365a.htm">
+        <HelpTOCNode Title="EventRequestProperties Members" Url="html/ed349c8d-9d8d-75c3-25ed-cea3eb7c8937.htm" />
+        <HelpTOCNode Title="EventRequestProperties Constructor " Url="html/3a2d1acf-ac71-7be6-5468-80878ff65108.htm" />
+        <HelpTOCNode Title="EventRequestProperties Methods" Url="html/6c0be79b-1569-02db-c464-c284a9f1e458.htm" />
+        <HelpTOCNode Id="8258f155-cd89-4df7-8084-9f86810de0b7" Title="EventRequestProperties Properties" Url="html/ca64616d-2bf8-57de-4a67-20c68b3a830d.htm">
+          <HelpTOCNode Title="name Property " Url="html/4b3eda28-08e3-3e02-b225-1e006c57f602.htm" />
+          <HelpTOCNode Title="value Property " Url="html/96c658f4-7317-76d9-3e43-e75daa8752a6.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="e3c28eae-57ed-4048-9dbb-90cad1b5f866" Title="GetEventCollectionResponse Class" Url="html/aa3177ab-eed5-fc6e-d93b-3a633f9cc9d7.htm">
+        <HelpTOCNode Title="GetEventCollectionResponse Members" Url="html/2bddac21-6ac7-3fe9-97c5-ceb1018406d1.htm" />
+        <HelpTOCNode Title="GetEventCollectionResponse Constructor " Url="html/3c2e03a8-d7cf-5b65-ce3d-d1ea0e85915e.htm" />
+        <HelpTOCNode Id="e90d707f-cf4d-462e-b816-8ee943f79f8d" Title="GetEventCollectionResponse Fields" Url="html/c8050771-eeff-0c05-3858-d45fe63b749d.htm">
+          <HelpTOCNode Title="url Field" Url="html/5bad6ef0-3a57-7884-617e-e5e9a7526c98.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetEventCollectionResponse Methods" Url="html/2e1f4c34-88fa-cbde-de45-c4efdc913415.htm" />
+        <HelpTOCNode Id="0ad532b1-3c95-4477-9bab-d48d116b84f2" Title="GetEventCollectionResponse Properties" Url="html/814ea9eb-99b8-6da4-66e5-b111f125ad2e.htm">
+          <HelpTOCNode Title="error_code Property " Url="html/7752ff0e-891b-9951-5a11-0c31cbc41e2d.htm" />
+          <HelpTOCNode Title="message Property " Url="html/229a89d9-8506-f01e-7ade-082bd340d3b4.htm" />
+          <HelpTOCNode Title="name Property " Url="html/64c9f03d-ee47-93a9-4302-96525d653033.htm" />
+          <HelpTOCNode Title="properties Property " Url="html/684ca811-918a-3d1d-649f-2733cccf24d0.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="08575ba7-57b1-482f-b8b9-220794a8ce27" Title="GetEventResponse Class" Url="html/c2cb25df-ae07-5fef-0097-6d7aff75d9c2.htm">
+        <HelpTOCNode Title="GetEventResponse Members" Url="html/b39ef2e4-76d8-3732-8f95-60a2e9d4f8d6.htm" />
+        <HelpTOCNode Title="GetEventResponse Constructor " Url="html/d44a47b8-fccb-ac08-4649-a9fbac6bde6e.htm" />
+        <HelpTOCNode Id="657732cc-3b45-4b8a-a191-555b4a627e12" Title="GetEventResponse Fields" Url="html/0a5db259-c529-cc5b-df0e-402351eb90dc.htm">
+          <HelpTOCNode Title="url Field" Url="html/810f7a5d-8241-75f3-d843-d02d20cff6ea.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetEventResponse Methods" Url="html/9c802cd4-f31e-b058-67a8-6003703529f4.htm" />
+        <HelpTOCNode Id="15bb91ba-34ce-41d7-b38b-09c2137a6498" Title="GetEventResponse Properties" Url="html/2afa741a-1d72-b7e8-b475-ed31afea5f6e.htm">
+          <HelpTOCNode Title="error_code Property " Url="html/9e8994da-45ff-d77c-6625-be49100de38e.htm" />
+          <HelpTOCNode Title="message Property " Url="html/dc4a77b3-12fd-ecb4-9979-a042125a172a.htm" />
+          <HelpTOCNode Title="name Property " Url="html/ed4fcb5f-feb7-554f-7566-fcc435d2ce56.htm" />
+          <HelpTOCNode Title="properties Property " Url="html/14f1f2de-7aa4-18f1-6fe6-ea3912244a2b.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="64b6bc03-96a5-410a-865a-41a13668cc50" Title="InsertEvent Class" Url="html/65dafcf4-4960-2c76-1820-a284db77c5c8.htm">
+        <HelpTOCNode Title="InsertEvent Members" Url="html/14f37837-2554-0b11-448b-01070cdeea11.htm" />
+        <HelpTOCNode Title="InsertEvent Constructor " Url="html/8a48ebbe-4cbf-7c46-6d56-a66767580652.htm" />
+        <HelpTOCNode Title="InsertEvent Methods" Url="html/cfbd6b34-0071-404f-0eba-e0483530ae2f.htm" />
+        <HelpTOCNode Id="6a1367e0-bd81-4561-b556-1ef07c8e79c3" Title="InsertEvent Properties" Url="html/359be3ad-4694-5b76-2db1-01767c065b16.htm">
+          <HelpTOCNode Title="keen Property " Url="html/4e356a5c-90a2-4897-8cec-adccbf0d16bb.htm" />
+          <HelpTOCNode Title="properties Property " Url="html/8456d1f5-251b-d4e3-2420-874c2634cbe6.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="f1af751f-d75a-4a03-a728-d4acdb7ac8f8" Title="InsertEventCollectionRequest Class" Url="html/03c95ece-104f-261a-6186-e1b8447a1a11.htm">
+        <HelpTOCNode Title="InsertEventCollectionRequest Members" Url="html/72661dc0-5a45-667c-00eb-92892bb661a9.htm" />
+        <HelpTOCNode Title="InsertEventCollectionRequest Constructor " Url="html/af273864-8dad-91ae-5a74-41b1a48fc50e.htm" />
+        <HelpTOCNode Title="InsertEventCollectionRequest Methods" Url="html/cd48e86b-fe69-16f1-e7d0-a373e09aef6b.htm" />
+        <HelpTOCNode Id="ad7e8f76-161e-491a-b07a-2eee6b2f0ed5" Title="InsertEventCollectionRequest Properties" Url="html/54ba44d7-9d98-d0c2-4b77-8133564968dc.htm">
+          <HelpTOCNode Title="collectionName Property " Url="html/19a5f18d-2ff8-b6ea-a22b-2335c62c9de2.htm" />
+          <HelpTOCNode Title="eventName Property " Url="html/74818a58-c04e-1b90-a996-f1e159695c2e.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b34e9f9c-636c-4527-b458-dbfd30e11cd3" Title="InsertEventCollectionResponse Class" Url="html/1b10a962-8be1-a78e-581d-8c01ce8221ac.htm">
+        <HelpTOCNode Title="InsertEventCollectionResponse Members" Url="html/aeea7cce-5c9c-37dc-0b0d-0f3ea5db7ac8.htm" />
+        <HelpTOCNode Title="InsertEventCollectionResponse Constructor " Url="html/c184785f-95b5-41e8-1cd5-77bb90221e81.htm" />
+        <HelpTOCNode Title="InsertEventCollectionResponse Methods" Url="html/c0a6a411-584f-b382-ae88-472b6c38fbc4.htm" />
+        <HelpTOCNode Id="665104b1-5bd4-4c98-a315-2c194e1e8c0e" Title="InsertEventCollectionResponse Properties" Url="html/ab9daa3c-31c3-7cfd-dd74-8814cb6d2498.htm">
+          <HelpTOCNode Title="error_code Property " Url="html/1ab6c8d5-7416-6e86-ebf0-0fd9c2154ed7.htm" />
+          <HelpTOCNode Title="items Property " Url="html/3bfc0617-3c39-47cc-72db-51257b1a583a.htm" />
+          <HelpTOCNode Title="message Property " Url="html/34d5122f-7344-87e2-1783-4f6a8ed95d18.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="ab8e7e18-483c-4076-918c-2b9f2541df40" Title="InsertEventRequest Class" Url="html/adde0dae-aba1-f7d7-6dda-2726379747cf.htm">
+        <HelpTOCNode Title="InsertEventRequest Members" Url="html/7d6c1694-ce03-b350-c656-9aefb5f65cae.htm" />
+        <HelpTOCNode Title="InsertEventRequest Constructor " Url="html/ffa85d53-05b2-d14c-24e4-8ad9b6e50dea.htm" />
+        <HelpTOCNode Title="InsertEventRequest Methods" Url="html/cd532081-f9f9-fe14-fbca-c8330a5655e4.htm" />
+        <HelpTOCNode Title="InsertEventRequest Properties" Url="html/f31cf081-e568-913a-9182-bb6b8f43ddd7.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ca846673-5882-4e2c-903d-22ec0bde6988" Title="InsertEventResponse Class" Url="html/b00bad0b-9313-3f5d-2989-4ff73b828cde.htm">
+        <HelpTOCNode Title="InsertEventResponse Members" Url="html/1e9a9a45-4ad9-26f9-e620-de0bf1919614.htm" />
+        <HelpTOCNode Title="InsertEventResponse Constructor " Url="html/0498c1ec-4137-21d6-e259-9bd9d222c218.htm" />
+        <HelpTOCNode Title="InsertEventResponse Methods" Url="html/b6df201f-5eb4-75d0-953a-4400f8458c1f.htm" />
+        <HelpTOCNode Id="a55411f0-76a1-461b-ac80-f7903531db43" Title="InsertEventResponse Properties" Url="html/76612179-1919-4f95-14cd-b9582ff6b32b.htm">
+          <HelpTOCNode Title="error_code Property " Url="html/1ef66bbf-d9b3-bbb4-4503-d041019cbaab.htm" />
+          <HelpTOCNode Title="items Property " Url="html/a86aec7b-c9f3-19a2-c0b3-eaa294c27305.htm" />
+          <HelpTOCNode Title="message Property " Url="html/28289abd-5974-3ac3-5aa4-e7b804b067ef.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="9edc0ffe-a080-4228-85b2-d26afea6f12f" Title="InsertEventResponseStatus Class" Url="html/d1ba9315-d336-0276-fc80-93de66c017fd.htm">
+        <HelpTOCNode Title="InsertEventResponseStatus Members" Url="html/373c379a-d234-2dc4-6909-8bba01a1d87d.htm" />
+        <HelpTOCNode Title="InsertEventResponseStatus Constructor " Url="html/031c7711-9d40-075c-823a-94c7dff3e18b.htm" />
+        <HelpTOCNode Title="InsertEventResponseStatus Methods" Url="html/7323207e-409d-ad50-034c-b377abcacd6e.htm" />
+        <HelpTOCNode Id="a238fc20-a429-4264-b49e-c1313ad54718" Title="InsertEventResponseStatus Properties" Url="html/c71f9cbe-9f29-aa16-8c31-a716225d98f5.htm">
+          <HelpTOCNode Title="status Property " Url="html/3b7bc876-6e95-72b6-6c07-e33a172f145c.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b26e08b3-4f85-412a-9c16-b821ede73c77" Title="KeenIO Class" Url="html/818361e3-bb50-cca8-a45e-f4cd8a2701c5.htm">
+        <HelpTOCNode Title="KeenIO Members" Url="html/41388ac2-7bef-8539-68f2-282593f6ea93.htm" />
+        <HelpTOCNode Title="KeenIO Constructor " Url="html/93c7aa26-b5d1-79d4-5214-f3b709aa5165.htm" />
+        <HelpTOCNode Id="13d66b77-9985-498a-8d49-916c49d026ac" Title="KeenIO Methods" Url="html/9db6ea69-6dbd-80ab-ae1a-fcb2c2ab849e.htm">
+          <HelpTOCNode Title="Extraction Method " Url="html/f6f30558-d938-592a-839d-05c9a53fe84d.htm" />
+          <HelpTOCNode Title="FunnelResource Method " Url="html/34404f0c-2348-f0e5-93e1-e4453b44a9fc.htm" />
+          <HelpTOCNode Title="GetAverage Method " Url="html/21f37976-cae7-b914-3038-6313d22b5f91.htm" />
+          <HelpTOCNode Title="GetCount Method " Url="html/ab8f22b1-0309-36d6-a143-58fe76c6c99a.htm" />
+          <HelpTOCNode Title="GetCountUnique Method " Url="html/99d06772-a7fe-430c-0fe7-8a5198b54083.htm" />
+          <HelpTOCNode Title="GetDiscovery Method " Url="html/2b23ebc1-64ea-7780-36f1-e684c93d7231.htm" />
+          <HelpTOCNode Title="GetEvent Method " Url="html/b16380c6-d223-cef7-bea5-4c6e22892ae5.htm" />
+          <HelpTOCNode Title="GetEventCollection Method " Url="html/3bd68f48-1425-1a3b-f018-4b952c7e8af2.htm" />
+          <HelpTOCNode Title="GetMaximum Method " Url="html/d4e90166-8d26-35fe-2122-5db2549b643f.htm" />
+          <HelpTOCNode Title="GetMinimum Method " Url="html/55e15c3a-818b-e86b-1782-0af6e80f9098.htm" />
+          <HelpTOCNode Title="GetProjectRow Method " Url="html/7b0af186-b1be-c89f-f426-0ba4a4a5313d.htm" />
+          <HelpTOCNode Title="GetProjects Method " Url="html/17781680-6fc3-3462-8759-a24efc7ff297.htm" />
+          <HelpTOCNode Title="GetQueries Method " Url="html/65b0af01-8966-cd0c-f7d7-c615a4a96d04.htm" />
+          <HelpTOCNode Title="GetSum Method " Url="html/09a79e04-f7c0-5d51-5205-8bb926deb198.htm" />
+          <HelpTOCNode Title="GetVersions Method " Url="html/bc0516ef-176a-8967-6978-a7291754ceaa.htm" />
+          <HelpTOCNode Title="InsertEvent Method " Url="html/9799e157-2efe-6b69-3fc5-9a5ee50038f6.htm" />
+          <HelpTOCNode Title="InsertEventCollection Method " Url="html/4996cef8-07e8-3354-cb97-107f6a68902d.htm" />
+          <HelpTOCNode Title="SavedQueriesList Method " Url="html/763aacaa-fd98-b7ed-27ff-a71db080d6a4.htm" />
+          <HelpTOCNode Title="SavedQueryRow Method " Url="html/51c242a7-5e5c-2ba2-2883-e078a95b8bf1.htm" />
+          <HelpTOCNode Title="SavedQuieryRowResult Method " Url="html/d770de6e-f7e7-a9dd-c451-cb8fb68546e3.htm" />
+          <HelpTOCNode Title="SelectUnique Method " Url="html/3cead6b6-5e0e-2ca4-3772-8feee82b71e0.htm" />
+          <HelpTOCNode Title="SetAPIKey Method " Url="html/0e6d951e-bb85-137b-b0e1-226f7c398f5f.htm" />
+          <HelpTOCNode Title="SetAPIVersion Method " Url="html/887e2660-ae61-2fc7-d6a9-8ae47036d8e8.htm" />
+          <HelpTOCNode Title="SetProjectKey Method " Url="html/32b3c8b1-5f1c-514e-98e7-a78f6819e775.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="e0d37727-a6e5-4572-997c-3506f5bc3718" Title="KeenTimeStamp Class" Url="html/f660d4d5-3632-9318-aa78-f6d369668933.htm">
+        <HelpTOCNode Title="KeenTimeStamp Members" Url="html/28b26651-45a6-ac63-5174-75a32b349c6d.htm" />
+        <HelpTOCNode Title="KeenTimeStamp Constructor " Url="html/0389271d-d1c0-bb92-9ecb-6a2a355c1c7f.htm" />
+        <HelpTOCNode Title="KeenTimeStamp Methods" Url="html/ad7b1f00-3e28-58c7-030e-9af451bf6bac.htm" />
+        <HelpTOCNode Id="f1fe637c-284c-4b6c-a9e3-44ef1fba9335" Title="KeenTimeStamp Properties" Url="html/e5cd28b4-80a3-98f3-fe99-87cc95807f88.htm">
+          <HelpTOCNode Title="created_at Property " Url="html/60ae91a2-5181-108a-3222-e2effea81695.htm" />
+          <HelpTOCNode Title="setDateTime Property " Url="html/e77c4215-d3a9-49c2-eadf-81925251990b.htm" />
+          <HelpTOCNode Title="setTimeStamp Property " Url="html/d09aac69-f0cc-d870-96dd-e0559c79b1bc.htm" />
+          <HelpTOCNode Title="timestamp Property " Url="html/c857811f-3618-046f-0091-3af52e083465.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="8c9c3dd0-56d7-4533-9eff-0a4938e3301b" Title="ProjectRowResponse Class" Url="html/429da5a0-d753-d0c5-7ac3-744f4f5bbd25.htm">
+        <HelpTOCNode Title="ProjectRowResponse Members" Url="html/33dcd042-b968-6282-5433-182ea03a258e.htm" />
+        <HelpTOCNode Title="ProjectRowResponse Constructor " Url="html/47b742fc-fce0-a918-4227-dbc4ae3f4934.htm" />
+        <HelpTOCNode Title="ProjectRowResponse Methods" Url="html/1e4d6ec7-0715-c5f4-e8de-f9273fd61d0e.htm" />
+        <HelpTOCNode Id="d514eafc-c159-4d71-9463-ca77041243dd" Title="ProjectRowResponse Properties" Url="html/0d252fa8-d6f5-b19a-ffad-95c9a88e679b.htm">
+          <HelpTOCNode Title="api_key Property " Url="html/bc284766-06c0-247a-3c20-a95cb0c3bb77.htm" />
+          <HelpTOCNode Title="error_code Property " Url="html/327bc905-59a0-23a2-30c4-81fe257a150c.htm" />
+          <HelpTOCNode Title="events Property " Url="html/182aa27f-7d79-50e5-af80-d27b0a48ffc4.htm" />
+          <HelpTOCNode Title="events_url Property " Url="html/fc2e8c6a-12f1-c830-daf3-0787f9696309.htm" />
+          <HelpTOCNode Title="id Property " Url="html/fdb269b4-4fcf-1554-665e-fff0fac94c1d.htm" />
+          <HelpTOCNode Title="message Property " Url="html/fcbe3760-9c6d-5d62-e34f-caa9e330b0f7.htm" />
+          <HelpTOCNode Title="name Property " Url="html/8f159124-8bdd-5758-e6d0-5b4872199c19.htm" />
+          <HelpTOCNode Title="queries_url Property " Url="html/58500653-db78-5075-9533-07876fd0d661.htm" />
+          <HelpTOCNode Title="saved_queries Property " Url="html/257307f5-da03-8f1b-0f7b-3c913e77fb35.htm" />
+          <HelpTOCNode Title="url Property " Url="html/a03c0974-5ab3-c956-55d8-4b98753355ee.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5796d1cc-86ae-43cf-8503-e183ead91e88" Title="ProjectsResponse Class" Url="html/8f44aa14-36e1-8c8c-684d-ab4105a3239a.htm">
+        <HelpTOCNode Title="ProjectsResponse Members" Url="html/f04e1a84-3e0f-8731-d750-04924728b8a0.htm" />
+        <HelpTOCNode Title="ProjectsResponse Constructor " Url="html/68e7860e-4b9f-25d4-2cba-08bacde49852.htm" />
+        <HelpTOCNode Title="ProjectsResponse Methods" Url="html/557b54ef-dca2-73a4-ab99-d6f75f2c6b6d.htm" />
+        <HelpTOCNode Id="8741210f-c6b9-4c82-992c-8ee3e304d4c8" Title="ProjectsResponse Properties" Url="html/e64ac1c4-3ed7-8106-2ed6-225e90a8b5c2.htm">
+          <HelpTOCNode Title="api_key Property " Url="html/7a4cc91f-283d-447d-52b2-212418fb01ef.htm" />
+          <HelpTOCNode Title="error_code Property " Url="html/16a39860-ce1a-3bba-ee71-474d0af16dd8.htm" />
+          <HelpTOCNode Title="events Property " Url="html/3a4dfb78-1f37-f8cb-159d-5b15dd8fc7ca.htm" />
+          <HelpTOCNode Title="events_url Property " Url="html/b1db398b-e959-f355-24b2-6bbcad2ae328.htm" />
+          <HelpTOCNode Title="id Property " Url="html/5cd0e8e8-1cb2-f9b1-9374-33618ee7ad29.htm" />
+          <HelpTOCNode Title="message Property " Url="html/a8c482b2-6292-4f63-e8c2-62e1f3eb9219.htm" />
+          <HelpTOCNode Title="name Property " Url="html/d5bd3422-b00e-ca7c-ab18-1980204f264a.htm" />
+          <HelpTOCNode Title="queries_url Property " Url="html/36534c45-5d85-229f-f029-a6400a25961e.htm" />
+          <HelpTOCNode Title="saved_queries Property " Url="html/82d73ffd-70aa-88c3-85b6-ece4583458ed.htm" />
+          <HelpTOCNode Title="url Property " Url="html/bf5635c3-74c2-98e7-58a3-f259d8779ecd.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="758bb6b9-8012-4d07-bb4d-cba39684eb24" Title="VersionsResponse Class" Url="html/a522cc39-6fc9-a751-1e09-717162e0b987.htm">
+        <HelpTOCNode Title="VersionsResponse Members" Url="html/d8a98ea7-7feb-4860-a5d5-691fb0ca0b24.htm" />
+        <HelpTOCNode Title="VersionsResponse Constructor " Url="html/45a259e9-da5f-5982-4906-e06f86141693.htm" />
+        <HelpTOCNode Title="VersionsResponse Methods" Url="html/b9e57ffb-244c-3b6f-c797-efb0f1b6080f.htm" />
+        <HelpTOCNode Id="f63ae2b7-5e5f-40b9-9660-52635b07fab3" Title="VersionsResponse Properties" Url="html/957d1374-2a23-1dc3-ed25-7fd035812352.htm">
+          <HelpTOCNode Title="error_code Property " Url="html/3b08c4b0-64f4-80e2-8ab7-f9ac9786e4f5.htm" />
+          <HelpTOCNode Title="is_public Property " Url="html/fc9ea46e-413e-a86a-56b7-af919eb42940.htm" />
+          <HelpTOCNode Title="message Property " Url="html/e7b42641-9d46-e671-4074-a9e127a0a82b.htm" />
+          <HelpTOCNode Title="url Property " Url="html/5f8e2176-8dad-b3df-b80e-c03f939585b8.htm" />
+          <HelpTOCNode Title="version Property " Url="html/d88bd9d1-6acb-9b32-7f96-983141a78480.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

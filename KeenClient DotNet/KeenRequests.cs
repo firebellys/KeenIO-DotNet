@@ -32,6 +32,11 @@ namespace KeenClient_DotNet
     {
         public List<EventRequestProperties> properties { get; set; }
         public KeenTimeStamp keen { get; set; }
+        public InsertEvent()
+        {
+            keen = new KeenTimeStamp();
+            properties = new List<EventRequestProperties>();
+        }
     }
 
     /// <summary>
