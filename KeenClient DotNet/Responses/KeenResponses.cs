@@ -1,10 +1,6 @@
-﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
 
-namespace KeenClient_DotNet
+namespace KeenClient_DotNet.Responses
 {
     class KeenResponses
     {
@@ -115,7 +111,7 @@ namespace KeenClient_DotNet
 
     public class InsertEventResponseStatus
     {
-        public Dictionary<String, bool> status { get; set; }
+        public Dictionary<string, bool> status { get; set; }
     }
 
     public class EventProperties

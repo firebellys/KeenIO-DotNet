@@ -1,10 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
 
-namespace KeenClient_DotNet
+namespace KeenClient_DotNet.Requests
 {
     class KeenRequests
     {
@@ -14,7 +11,7 @@ namespace KeenClient_DotNet
     /// 
     /// </summary>
 
-    public class InsertEventRequest : Dictionary<String, List<InsertEvent>>
+    public class InsertEventRequest : Dictionary<string, List<InsertEvent>>
     {
 
     }

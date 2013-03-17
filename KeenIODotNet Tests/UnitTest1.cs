@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using KeenClient_DotNet;
+using KeenClient_DotNet.Requests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RestSharp;
 
 namespace KeenIODotNet_Tests
 {
@@ -153,13 +153,20 @@ namespace KeenIODotNet_Tests
 
             var testRequest = new InsertEventRequest();
 
-            var samepleEvents = new InsertEvent();
-            samepleEvents.keen = new KeenTimeStamp() { created_at = DateTime.Now, timestamp = DateTime.Now, setDateTime = true, setTimeStamp = true };
+            var samepleEvents = new InsertEvent
+                {
+                    keen =
+                        new KeenTimeStamp
+                            {
+                                created_at = DateTime.Now,
+                                timestamp = DateTime.Now,
+                                setDateTime = true,
+                                setTimeStamp = true
+                            },
+                    properties = new List<EventRequestProperties>()
+                };
 
-            samepleEvents.properties = new List<EventRequestProperties>();
-            var props = new EventRequestProperties();
-            props.name = "sameple1";
-            props.value = "value 2";
+            var props = new EventRequestProperties {name = "sameple1", value = "value 2"};
             samepleEvents.properties.Add(props);
 
             props = new EventRequestProperties();
@@ -172,11 +179,7 @@ namespace KeenIODotNet_Tests
             props.value = DateTime.Now;
             samepleEvents.properties.Add(props);
 
-            var listOfEvents = new List<InsertEvent>();
-
-            listOfEvents.Add(samepleEvents);
-            listOfEvents.Add(samepleEvents);
-
+            var listOfEvents = new List<InsertEvent> {samepleEvents, samepleEvents};
             testRequest.Add("Purchases", listOfEvents);
             testRequest.Add("Memes", listOfEvents);
             testRequest.Add("Dogs", listOfEvents);
@@ -204,11 +207,9 @@ namespace KeenIODotNet_Tests
             keenTestClient.SetProjectKey("e159853dd9a9463892c5354e1830c59b");
 
             var testRequest = new InsertEventCollectionRequest();
-            testRequest.keen = new KeenTimeStamp() { created_at = DateTime.Now, timestamp = DateTime.Now, setDateTime = true, setTimeStamp = true };
+            testRequest.keen = new KeenTimeStamp { created_at = DateTime.Now, timestamp = DateTime.Now, setDateTime = true, setTimeStamp = true };
             
-            var props = new EventRequestProperties();
-            props.name = "sameple1";
-            props.value = "value 2";
+            var props = new EventRequestProperties {name = "sameple1", value = "value 2"};
             testRequest.properties.Add(props);
 
             props = new EventRequestProperties();

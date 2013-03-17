@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Web.Script.Serialization;
+using KeenClient_DotNet.Requests;
+using KeenClient_DotNet.Responses;
 using RestSharp;
 using RestSharp.Serializers;
 

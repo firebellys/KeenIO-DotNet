@@ -37,11 +37,12 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="KeenRequests.cs" />
+    <Compile Include="Exceptions\KeenExceptions.cs" />
     <Compile Include="KeenContants.cs" />
     <Compile Include="KeenIO.cs" />
-    <Compile Include="KeenResponses.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\KeenRequests.cs" />
+    <Compile Include="Responses\KeenResponses.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="RestSharp">
