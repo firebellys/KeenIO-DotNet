@@ -13,7 +13,49 @@ Documentation will load in browser.
 
 Inserting Bulk events.
 ======================================
-Update Pending
+reate a new client 
+
+    var keenClient = new KeenIO();
+
+Set your parameters.
+
+    keenClient.SetAPIKey("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+    keenClient.SetProjectKey("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+
+Create a new request
+
+    var newRequest = new InsertEventRequest();
+
+Create a new event
+
+    var samepleEvents = new InsertEvent();
+
+Create a property group
+
+    var props = new EventRequestProperties {name = "sameple1", value = "value 2"};
+    samepleEvents.properties.Add(props);
+
+Stack your events into a list.
+
+    var listOfEvents = new List<InsertEvent> {samepleEvents, samepleEvents};
+
+Add your events list to a specific collection. The first param is the name, the second is the list of event.
+
+    newRequest.Add("Purchases", listOfEvents);
+    newRequest.Add("Memes", listOfEvents);
+    newRequest.Add("Dogs", listOfEvents);
+
+Call the client synchronous
+
+    var result = keenTestClient.InsertEvent(newRequest);
+
+Sort through the reply.
+
+    foreach (var eventResponse in result)
+    {
+     ...
+    }
+
 
 Inserting Single events.
 ======================================
