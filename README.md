@@ -13,7 +13,7 @@ Documentation will load in browser.
 
 Inserting Bulk events.
 ======================================
-reate a new client 
+Create a new client 
 
     var keenClient = new KeenIO();
 
