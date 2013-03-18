@@ -4,7 +4,14 @@ Installing
 Take the KeenIO.dll and drop into your project folder somewhere.
 Add it to your references.
 
-Inserting bulk events.
+Full Documentation.
+======================================
+[Jump to Current Documentation](https://github.com/firebellys/KeenIO-DotNet/tree/Dev/Documentation)
+
+Inserting Bulk events.
+======================================
+
+Inserting Single events.
 ======================================
 Create a new client 
 
