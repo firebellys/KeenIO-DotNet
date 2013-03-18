@@ -6,7 +6,10 @@ Add it to your references.
 
 Full Documentation.
 ======================================
-[Jump to Current Documentation](https://github.com/firebellys/KeenIO-DotNet/tree/Dev/Documentation)
+[Jump to Current Documentation](https://github.com/firebellys/KeenIO-DotNet/tree/Dev/Documentation/Help)
+Sync this folder locally.
+Load the Index.html file in a browser.
+Documentation will load in browser.
 
 Inserting Bulk events.
 ======================================
