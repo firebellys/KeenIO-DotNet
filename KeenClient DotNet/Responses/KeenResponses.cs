@@ -3,18 +3,12 @@ using System.Collections.Generic;
 namespace KeenClient_DotNet.Responses
 {
     class KeenResponses
-    {
+    {    
+
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    public class VersionsResponse
+    public class KeenBaseResponse
     {
-        public bool is_public { get; set; }
-        public string url { get; set; }
-        public string version { get; set; }
-
         // Error containers
         public string error_code { get; set; }
         public string message { get; set; }
@@ -23,7 +17,17 @@ namespace KeenClient_DotNet.Responses
     /// <summary>
     /// 
     /// </summary>
-    public class DiscoveryResponse
+    public class VersionsResponse : KeenBaseResponse
+    {
+        public bool is_public { get; set; }
+        public string url { get; set; }
+        public string version { get; set; }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public class DiscoveryResponse : KeenBaseResponse
     {
         public string projects_resource_url { get; set; }
 
@@ -31,7 +35,7 @@ namespace KeenClient_DotNet.Responses
         public string error_code { get; set; }
         public string message { get; set; }
     }
-    public class ProjectsResponse
+    public class ProjectsResponse : KeenBaseResponse
     {
         public string api_key { get; set; }
         public List<Event> events { get; set; }
@@ -41,10 +45,6 @@ namespace KeenClient_DotNet.Responses
         public string name { get; set; }
         public string queries_url { get; set; }
         public string url { get; set; }
-
-        // Error containers
-        public string error_code { get; set; }
-        public string message { get; set; }
     }
     public class Event
     {
@@ -52,7 +52,7 @@ namespace KeenClient_DotNet.Responses
         public string url { get; set; }
     }
 
-    public class ProjectRowResponse
+    public class ProjectRowResponse : KeenBaseResponse
     {
         public string api_key { get; set; }
         public List<Event> events { get; set; }
@@ -62,51 +62,31 @@ namespace KeenClient_DotNet.Responses
         public string name { get; set; }
         public string queries_url { get; set; }
         public string url { get; set; }
-
-        // Error containers
-        public string error_code { get; set; }
-        public string message { get; set; }
     }
 
-    public class GetEventResponse
+    public class GetEventResponse : KeenBaseResponse
     {
         public string name { get; set; }
         public Dictionary<string, string> properties { get; set; }
         public string url;
 
-        // Error containers
-        public string error_code { get; set; }
-        public string message { get; set; }
-
     }
 
-    public class GetEventCollectionResponse
+    public class GetEventCollectionResponse : KeenBaseResponse
     {
         public string name { get; set; }
         public Dictionary<string, string> properties { get; set; }
         public string url;
 
-        // Error containers
-        public string error_code { get; set; }
-        public string message { get; set; }
-
     }
-    public class InsertEventResponse
+    public class InsertEventResponse : KeenBaseResponse
     {
         public List<InsertEventResponseStatus> items { get; set; }
-
-        // Error containers
-        public string error_code { get; set; }
-        public string message { get; set; }
     }
 
-    public class InsertEventCollectionResponse
+    public class InsertEventCollectionResponse : KeenBaseResponse
     {
         public List<InsertEventResponseStatus> items { get; set; }
-
-        // Error containers
-        public string error_code { get; set; }
-        public string message { get; set; }
     }
 
     public class InsertEventResponseStatus
@@ -120,5 +100,24 @@ namespace KeenClient_DotNet.Responses
         public string value { get; set; }
     }
 
+    public class PropertyResponse
+    {
+        public string property_name { get; set; }
+        public string url { get; set; }
+        public string type { get; set; }
+    }
+    public class QueriesResponse : Dictionary<string, string>
+    {
+        // Error containers
+        public string error_code { get; set; }
+        public string message { get; set; }
+    }
 
+
+    public class CountRepsonse : Dictionary<string, string>
+    {
+        // Error containers
+        public string error_code { get; set; }
+        public string message { get; set; }
+    }
 }

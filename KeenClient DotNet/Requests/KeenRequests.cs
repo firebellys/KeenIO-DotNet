@@ -13,7 +13,7 @@ namespace KeenClient_DotNet.Requests
 
     public class InsertEventRequest : Dictionary<string, List<InsertEvent>>
     {
-
+        
     }
 
     public class InsertEventCollectionRequest : InsertEvent
@@ -51,16 +51,24 @@ namespace KeenClient_DotNet.Requests
         public DateTime created_at { get; set; }
         public DateTime timestamp { get; set; }
     }
-    //public partial class InsertEventCollectionRequest
-    //{
-    //    public List<InsertEvent> events { get; set; }
-    //    public List<InsertEventRequest> nestedEvents { get; set; }
-    //    public InsertEventCollectionRequest()
-    //    {
-    //        events = new List<InsertEvent>();
-    //        nestedEvents = new List<InsertEventRequest>();
-    //    }
-    //}
+
+    public class QueryFilter: List<Filters>  
+    {
+
+    }
+    
+    public class Filters
+    {
+        public string PropertyName { get; set; }
+        public string OperatorType { get; set; }
+        public string PropertyValue { get; set; }
+    }
+    
+    public class TimeFrame
+    {
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+    }
 
 
 }

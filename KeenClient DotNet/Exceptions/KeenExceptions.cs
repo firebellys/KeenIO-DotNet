@@ -6,25 +6,18 @@ namespace KeenClient_DotNet.Exceptions
     class KeenExceptions
     {
     }
-    public class KeenConnectionException : Exception, ISerializable
+    [Serializable]
+    public class KeenBaseException : Exception
     {
-        public KeenConnectionException()
+        public string ReturnMessage { get; set; }
+        public KeenBaseException()
         {
-            // Add implementation.
-        }
-        public KeenConnectionException(string message)
-        {
-            // Add implementation.
-        }
-        public KeenConnectionException(string message, Exception inner)
-        {
-            // Add implementation.
-        }
 
-        // This constructor is needed for serialization.
-        protected KeenConnectionException(SerializationInfo info, StreamingContext context)
+        }
+        public KeenBaseException(string message, string errorcode)
+            : base(errorcode)
         {
-            // Add implementation.
+            ReturnMessage = message;
         }
     }
 

@@ -79,7 +79,7 @@ namespace KeenClient_DotNet
         /// Versionses this instance.
         /// </summary>
         /// <returns>A list of Version replies.</returns>
-        private List<VersionsResponse> GetVersions()
+        public List<VersionsResponse> GetVersions()
         {
             var request = new RestRequest("/?api_key=" + _apiKey, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
@@ -87,13 +87,13 @@ namespace KeenClient_DotNet
             var content = response.Content;
             var deserializedReply = _restClient.Execute<List<VersionsResponse>>(request);
             return deserializedReply.Data;
-        }
+        }        
 
         /// <summary>
         /// Gets the discovery.
         /// </summary>
         /// <returns></returns>
-        private List<DiscoveryResponse> GetDiscovery()
+        public List<DiscoveryResponse> GetDiscovery()
         {
             var request = new RestRequest("/" + _apiVersion + "?api_key=" + _apiKey, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
@@ -107,7 +107,7 @@ namespace KeenClient_DotNet
         /// Gets the projects.
         /// </summary>
         /// <returns></returns>
-        private List<ProjectsResponse> GetProjects()
+        public List<ProjectsResponse> GetProjects()
         {
             var request = new RestRequest("/" + _apiVersion + "/projects?api_key=" + _apiKey, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
@@ -121,7 +121,7 @@ namespace KeenClient_DotNet
         /// Gets the project row.
         /// </summary>
         /// <returns></returns>
-        private List<ProjectRowResponse> GetProjectRow()
+        public List<ProjectRowResponse> GetProjectRow()
         {
             var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "?api_key=" + _apiKey, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
@@ -289,11 +289,64 @@ namespace KeenClient_DotNet
             var deserializedReply = _restClient.Execute<List<InsertEventCollectionResponse>>(request);
             return deserializedReply.Data;
         }
-        private void GetQueries()
+
+        /// <summary>
+        /// Gets the property.
+        /// </summary>
+        /// <param name="collectionName">Name of the collection.</param>
+        /// <param name="propertyName">Name of the property.</param>
+        /// <returns></returns>
+        public List<PropertyResponse> GetProperty(string collectionName, string propertyName)
         {
+            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/events/"+collectionName+"/properties/"+propertyName+"?api_key=" + _apiKey, Method.GET);
+            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
+            var response = _restClient.Execute(request);
+            var content = response.Content;
+            var deserializedReply = _restClient.Execute<List<PropertyResponse>>(request);
+            return deserializedReply.Data;
         }
-        private void GetCount()
+
+        public List<QueriesResponse> GetQueries()
         {
+            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/queries?api_key=" + _apiKey, Method.GET);
+            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
+            var response = _restClient.Execute(request);
+            var content = response.Content;
+            var deserializedReply = _restClient.Execute<List<QueriesResponse>>(request);
+            return deserializedReply.Data;
+        }
+
+
+        /// <summary>
+        /// Gets the count.
+        /// </summary>
+        /// <param name="collectionName">Name of the collection.</param>
+        private CountRepsonse GetCount(string collectionName)
+        {
+            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/queries/count?api_key=" + _apiKey+"&event_collection="+collectionName, Method.GET);
+            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
+            var response = _restClient.Execute(request);
+            var content = response.Content;
+            var deserializedReply = _restClient.Execute<CountRepsonse>(request);
+            return deserializedReply.Data;
+        }
+        private void GetCount(string collectionName, Filters filters )
+        {
+            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/queries?api_key=" + _apiKey, Method.GET);
+            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
+            var response = _restClient.Execute(request);
+            var content = response.Content;
+            var deserializedReply = _restClient.Execute<List<QueriesResponse>>(request);
+            return deserializedReply.Data;
+        }
+        private void GetCount(string collectionName, Filters filters, TimeFrame timeframe)
+        {
+            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/queries?api_key=" + _apiKey, Method.GET);
+            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
+            var response = _restClient.Execute(request);
+            var content = response.Content;
+            var deserializedReply = _restClient.Execute<List<QueriesResponse>>(request);
+            return deserializedReply.Data;
         }
         private void GetCountUnique()
         {
