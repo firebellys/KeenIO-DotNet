@@ -51,13 +51,24 @@ namespace KeenClient_DotNet.Requests
         public DateTime created_at { get; set; }
         public DateTime timestamp { get; set; }
     }
-
-    public class QueryFilter: List<Filters>  
+    public class QueryRequest
     {
-
+        public FilterList QueryFilters { get; set; }
+        public string QueryCollectionName { get; set; }
+        public TimeFrame QueryTimeFrame { get; set; }
     }
-    
-    public class Filters
+    /// <summary>
+    /// A list of Filters, Property - Operator - Value. "LastUpdate > 11/11/12"
+    /// </summary>
+    public class FilterList : List<Filter>
+    {
+        
+    }
+
+    /// <summary>
+    /// Usage:  "LastUpdate > 11/11/12"
+    /// </summary>
+    public class Filter
     {
         public string PropertyName { get; set; }
         public string OperatorType { get; set; }
@@ -69,7 +80,5 @@ namespace KeenClient_DotNet.Requests
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
     }
-
-
 }
 

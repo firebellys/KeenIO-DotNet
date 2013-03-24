@@ -321,33 +321,16 @@ namespace KeenClient_DotNet
         /// Gets the count.
         /// </summary>
         /// <param name="collectionName">Name of the collection.</param>
-        private CountRepsonse GetCount(string collectionName)
+        public CountRepsonse GetCount(QueryRequest countRequest)
         {
-            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/queries/count?api_key=" + _apiKey+"&event_collection="+collectionName, Method.GET);
+            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/queries/count?api_key=" + _apiKey+"&event_collection="+countRequest.QueryCollectionName, Method.GET);
             request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
             var response = _restClient.Execute(request);
             var content = response.Content;
             var deserializedReply = _restClient.Execute<CountRepsonse>(request);
             return deserializedReply.Data;
         }
-        private void GetCount(string collectionName, Filters filters )
-        {
-            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/queries?api_key=" + _apiKey, Method.GET);
-            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
-            var response = _restClient.Execute(request);
-            var content = response.Content;
-            var deserializedReply = _restClient.Execute<List<QueriesResponse>>(request);
-            return deserializedReply.Data;
-        }
-        private void GetCount(string collectionName, Filters filters, TimeFrame timeframe)
-        {
-            var request = new RestRequest("/" + _apiVersion + "/projects/" + _projectKey + "/queries?api_key=" + _apiKey, Method.GET);
-            request.AddParameter("Content-Type", "application/json", ParameterType.HttpHeader);
-            var response = _restClient.Execute(request);
-            var content = response.Content;
-            var deserializedReply = _restClient.Execute<List<QueriesResponse>>(request);
-            return deserializedReply.Data;
-        }
+    
         private void GetCountUnique()
         {
         }
